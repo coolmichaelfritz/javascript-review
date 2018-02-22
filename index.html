@@ -16,17 +16,31 @@
     </div>
     <div class="container">
       <p>Here at The Suggestion Machine we do our best to provide you with the perfect suggestion.</p>
-      <form id="restaurant">
-        <div class="radio">
-          Where do you live?
-          <label>
-            <input value="westSide" name="cityLocation" type="radio">
-            Westside
-          </label>
-          <label>
-            <input value="eastSide" name="cityLocation" type="radio">
-            Eastside
-          </label>
+      <form id="userInfo">
+        <!--Question 1-->
+        <div class="from-group">
+          <label for="age">1. How old are you?</label>
+          <input id="age" class="form-control" type="number" placeholder="Enter Age">
+        </div>
+        <!--Question 2-->
+        <div class="from-group">
+          <p>2. Do you like to go outside?</p>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="goOutsideYes" value="option1">
+            <label class="form-check-label" for="inlineRadio1">Yes</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="goOutsideNo" value="option2">
+            <label class="form-check-label" for="inlineRadio2">No</label>
+          </div>
+        </div>
+        <!--Question 3-->
+        <label for="temperature">3. What is your favorite temperature?</label>
+        <div class="input-group mb-3">
+          <input id="temperature" class="form-control" type="number" placeholder="Favorite Temperature">
+          <div class="input-group-append">
+            <span class="input-group-text">degrees</span>
+          </div>
         </div>
         <button type="submit" class="btn btn-outline-light">Where should you eat?</button>
       </form>
