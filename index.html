@@ -18,31 +18,48 @@
       <p>Here at The Suggestion Machine we do our best to provide you with the perfect suggestion.</p>
       <form id="userInfo">
         <!--Question 1-->
-        <div class="from-group">
-          <label for="age">1. How old are you?</label>
-          <input id="age" class="form-control" type="number" placeholder="Enter Age">
+        <div class="from-group bottom-space">
+          <label for="name" class="font-weight-bold">1. What is your name?</label>
+          <input id="name" class="form-control" type="text" placeholder="Enter Name">
         </div>
         <!--Question 2-->
-        <div class="from-group">
-          <p>2. Do you like to go outside?</p>
+        <div class="from-group bottom-space">
+          <p class="font-weight-bold">2. Do you like to go outside?</p>
           <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="goOutsideYes" value="option1">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="goOutsideYes" value="goOutsideYes">
             <label class="form-check-label" for="inlineRadio1">Yes</label>
           </div>
           <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="goOutsideNo" value="option2">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="goOutsideNo" value="goOutsideNo">
             <label class="form-check-label" for="inlineRadio2">No</label>
           </div>
         </div>
         <!--Question 3-->
-        <label for="temperature">3. What is your favorite temperature?</label>
-        <div class="input-group mb-3">
+        <label for="temperature" class="font-weight-bold">3. What is your favorite temperature?</label>
+        <div class="input-group mb-3 bottom-space">
           <input id="temperature" class="form-control" type="number" placeholder="Favorite Temperature">
           <div class="input-group-append">
             <span class="input-group-text">degrees</span>
           </div>
         </div>
-        <button type="submit" class="btn btn-outline-light">Where should you eat?</button>
+        <!--Question 4-->
+        <p class="font-weight-bold">4. Which do you prefer?</p>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="Snow" value="Snow">
+          <label class="form-check-label" for="inlineRadio1">Snow</label>
+        </div>
+        <div class="form-check form-check-inline bottom-space">
+          <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="Sand" value="Sand">
+          <label class="form-check-label" for="Sand">Sand</label>
+        </div>
+        <!--Question 5-->
+        <div class="from-group bottom-space">
+          <label for="age" class="font-weight-bold">5. How old are you?</label>
+          <input id="age" class="form-control" type="number" placeholder="Enter Age">
+        </div>
+
+
+        <button type="submit" class="btn btn-outline-light">Where should you travel?</button>
       </form>
       <div id="output">
       </div>

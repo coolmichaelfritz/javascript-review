@@ -8,6 +8,10 @@ h1 {
 
 }
 
+.bottom-space {
+  margin-bottom: 10px
+}
+
 .jumbotron {
   background-color: #083D77
 }
