@@ -15,3 +15,11 @@ h1 {
 .jumbotron {
   background-color: #083D77
 }
+
+.result {
+  display: none;
+}
+
+#resultBanf, #resultPortland, #resultMaui {
+  display: none;
+}

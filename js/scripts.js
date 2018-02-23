@@ -1,28 +1,24 @@
 $(document).ready(function() {
-  $("form#restaurant").submit(function() {
+  $("form#userInfo").submit(function(event) {
     var userName = $("input#name").val();
     var userRadio1 = $("input:radio[name=inlineRadioOptions]:checked").val();
     var userTemp = parseInt($("input#temperature").val());
     var userRadio2 = $("input:radio[name=inlineRadioOptions2]:checked").val();
     var userAge = parseInt($("input#age").val());
 
+    if (userRadio1 === "goOutsideYes") {
+      $("#resultBanf").show();
+      $("#resultMaui").hide();
+    }
+    else {
+      $("#resultMaui").show();
+      $("#resultBanf").hide();
+    }
 
-    var cityLocation = $("input:radio[name=cityLocation]:checked").val();
-    var result;
-    if (cityLocation === "eastSide") {
-      result = ("hamburger");
-    } else if (cityLocation === "westSide") {
-      result = ("Chaba Thai");
-    };
+    $(".resultName").text(userName);
+    $("#result").show();
 
-
-    $("#output").text(result)
+    event.preventDefault();
   });
-
-
-
-
-
-
 
 });
