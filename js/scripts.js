@@ -11,16 +11,17 @@ $(document).ready(function() {
       $("#resultMaui").hide();
       $("resultPortland").hide();
     }
+    // else if (userRadio1 === "goOutsideNo") {
+    //   $("resultPortland").show();
+    //   $("#resultMaui").hide();
+    //   $("#resultBanf").hide();
+    // }
     else {
       $("#resultMaui").show();
       $("#resultBanf").hide();
       $("resultPortland").hide();
     }
-    // else {
-    //   $("resultPortland").show();
-    //   $("#resultMaui").hide();
-    //   $("#resultBanf").hide();
-    // }
+  
 
     $(".resultName").text(userName);
     $("#result").show();
