@@ -6,22 +6,28 @@ $(document).ready(function() {
     var userRadio2 = $("input:radio[name=inlineRadioOptions2]:checked").val();
     var userAge = parseInt($("input#age").val());
 
-    if (userRadio1 === "goOutsideYes" || userRadio2 === "Snow" || userTemp < 60) {
+    if (userRadio1 === "goOutsideYes" && userRadio2 === "Snow" || userTemp < 60) {
       $("#resultBanf").show();
       $("#resultMaui").hide();
-      $("resultPortland").hide();
+      $("#resultPortland").hide();
     }
-    // else if (userRadio1 === "goOutsideNo") {
-    //   $("resultPortland").show();
-    //   $("#resultMaui").hide();
-    //   $("#resultBanf").hide();
-    // }
+    else if (userRadio1 === "goOutsideNo") {
+      $("#resultPortland").show();
+      $("#resultMaui").hide();
+      $("#resultBanf").hide();
+    }
+    else if (userRadio1 === "goOutsideYes" && userRadio2 === "Sand") {
+      $("#resultMaui").show();
+      $("#resultBanf").hide();
+      $("#resultPortland").hide();
+    }
+
     else {
       $("#resultMaui").show();
       $("#resultBanf").hide();
-      $("resultPortland").hide();
+      $("#resultPortland").hide();
     }
-  
+
 
     $(".resultName").text(userName);
     $("#result").show();
